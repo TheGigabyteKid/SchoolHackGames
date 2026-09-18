@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Platform</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f0f0f0;margin:0;padding:30px}h1{text-align:center;margin-bottom:30px}.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:auto}.game{background:white;border-radius:15px;padding:20px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.15)}.game-title{font-size:20px;font-weight:bold;margin-bottom:8px}.creator{color:#666;margin-bottom:15px}.download{display:inline-block;background:#007bff;color:white;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;font-size:16px}.download:hover{background:#0056b3}
+</style>
+</head>
+<body>
+<h1>Games</h1>
+<div class="games">
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+        <div class="game">
+            <div class="game-title">Flappy Eagle</div>
+            <div class="creator">The Gigabyte Kid</div>
+            <button class="download" onclick="downloadGame()">Download</button>
+        </div>
+
+</div>
+<script>
+async function downloadGame(){const url="https://raw.githubusercontent.com/TheGigabyteKid/SchoolHackGames/refs/heads/main/flappy-eagle.html";try{const response=await fetch(url);if(!response.ok)throw new Error("Download failed");const blob=await response.blob();const downloadUrl=URL.createObjectURL(blob);const link=document.createElement("a");link.href=downloadUrl;link.download="flappy-eagle.html";document.body.appendChild(link);link.click();link.remove();URL.revokeObjectURL(downloadUrl)}catch(error){alert("The game could not be downloaded. Please try again.")}}
+</script>
+</body>
+</html>
