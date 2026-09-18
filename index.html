@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Hack Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #40e0d0 0%, #ffd700 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px 40px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        h1 span {
+            color: #40e0d0;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .download-section {
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #40e0d0;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 30px 80px;
+            border-radius: 15px;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            border: 3px solid #40e0d0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+        }
+
+        .download-btn:active {
+            transform: translateY(-2px);
+        }
+
+        .arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .arrow {
+            width: 60px;
+            height: 3px;
+            background-color: #40e0d0;
+            position: relative;
+        }
+
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -8px;
+            border: 10px solid transparent;
+            border-left: 15px solid #40e0d0;
+        }
+
+        .arrow.left::after {
+            right: auto;
+            left: 0;
+            border: 10px solid transparent;
+            border-right: 15px solid #40e0d0;
+        }
+
+        .explanation {
+            background-color: #f9f9f9;
+            border-left: 5px solid #40e0d0;
+            padding: 30px;
+            margin-top: 40px;
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .explanation h2 {
+            color: #40e0d0;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .explanation p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .explanation ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .explanation li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .explanation li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .highlight {
+            background-color: #ffd700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .download-btn {
+                font-size: 1.5em;
+                padding: 20px 40px;
+            }
+            
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>School <span>Hack</span> Games</h1>
+        <p class="tagline">Unblockable Games for School Chromebooks</p>
+        
+        <div class="download-section">
+            <div class="arrows">
+                <div class="arrow left"></div>
+            </div>
+            <a href="#" id="download-btn" class="download-btn">Download Now</a>
+            <div class="arrows">
+                <div class="arrow"></div>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h2>How It Works:</h2>
+            <ul>
+                <li>Click the <span class="highlight">Download Now</span> button above to download a self-contained <strong>.html file</strong> to your computer — this is the full game site.</li>
+                <li><strong>Double-click</strong> the downloaded file to open it in your browser.</li>
+                <li><strong>Bookmark it</strong> for instant access anytime!</li>
+                <li>The downloaded page includes <strong>more download buttons</strong> for additional .html game files.</li>
+                <li>All games are <strong>fully offline</strong> and <strong>unblockable</strong> by school Chromebook filters!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', async function(e) {
+            e.preventDefault(); // Prevent default link behavior
+            
+            const url = 'https://raw.githubusercontent.com/TheGigabyteKid/SchoolHackGames/refs/heads/main/school-hack-games.html';
+            const filename = 'school-hack-games.html';
+            
+            try {
+                // Show a temporary loading state (optional but good UX)
+                const originalText = this.innerText;
+                this.innerText = 'Downloading...';
+                
+                // Fetch the file as a blob
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const blob = await response.blob();
+                
+                // Create a temporary object URL for the blob
+                const blobUrl = window.URL.createObjectURL(blob);
+                
+                // Create a hidden link to trigger the download
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = blobUrl;
+                a.download = filename;
+                document.body.appendChild(a);
+                
+                // Trigger the download
+                a.click();
+                
+                // Clean up
+                window.URL.revokeObjectURL(blobUrl);
+                document.body.removeChild(a);
+                
+                // Restore button text
+                this.innerText = originalText;
+            } catch (error) {
+                console.error('Download failed:', error);
+                alert('Download failed. Please check your internet connection and try again.');
+                this.innerText = 'Download Now';
+            }
+        });
+    </script>
+</body>
+</html>
